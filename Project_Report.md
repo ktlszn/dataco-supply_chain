@@ -1,6 +1,5 @@
-**Improving Supply Chain Management by Machine Learning Applications:** 
+# **Improving Supply Chain Management by Machine Learning Applications: DataCo Global Case Study**
 
-**DataCo Global Case Study**
 # **Abstract**
 In today’s globalized world, supply chains are the foundations of international trade. By variety of newly developed data collection and machine learning methods, application of big data analytics on supply chains become more accessible and widely utilized. Prediction of the status of goods and shortening supply chains are still stand out as a few of main problems in supply chain management. In this project, I investigate possible practices to explore supply chain data by analyzing DataCo Global Supply Chain dataset and apply multiple machine learning models to improve supply chain management.
 ## **Keywords**
