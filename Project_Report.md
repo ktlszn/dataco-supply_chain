@@ -116,9 +116,8 @@ This methodology (Figure 1.) consists of total 6 parts:
 - Evaluation: In evaluation phase we review the results and evaluate the outcomes.
 - Deployment: This is the phase of model deployment and reporting our results with stakeholders.
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.005.png)![Diagram
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/CRISP-DM.png" alt="drawing" height="500"/>
 
-Description automatically generated](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.006.png)
 ### *Figure 1. CRISP-DM Methodology*
 
 # **Data Preprocessing**
