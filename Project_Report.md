@@ -1,118 +1,3 @@
-﻿2
-
-
-IMPROVING SUPPLY CHAIN MANAGEMENT BY MACHINE LEARNING APPLICATIONS: DATACO GLOBAL CASE STUDY
-
-Kutlu Sezen - 0775973 
-
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.001.png)![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.002.png)
-
-Supervisor 
-
-Savita Seharawat
-
-DAB402
-
-Capstone Project
-
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.003.png)![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.004.png)**
-# **Table of Contents**
-[**Abstract**	1](#_Toc101131071)
-
-[**Keywords**	1](#_Toc101131072)
-
-[**Research Questions**	1](#_Toc101131073)
-
-[**Data Dictionary**	2](#_Toc101131074)
-
-[**Summary of Categorical Attributes**	2](#_Toc101131075)
-
-[*Table 1. Categorical Attributes*	2](#_Toc101131076)
-
-[**Summary of Numerical Attributes**	4](#_Toc101131077)
-
-[*Table 2. Numerical Attributes*	4](#_Toc101131078)
-
-[**Introduction**	7](#_Toc101131079)
-
-[**Related Work**	8](#_Toc101131080)
-
-[**Methodology**	10](#_Toc101131081)
-
-[*Figure 1. CRISP-DM Methodology*	11](#_Toc101131082)
-
-[**Data Preprocessing**	11](#_Toc101131083)
-
-[*Table 3. Unique Values of Attributes*	11](#_Toc101131084)
-
-[*Table 4. Attributes with Low Variance*	12](#_Toc101131085)
-
-[*Table 5. Value Counts of Low Variance (Order Item Discount Rate) Attribute*	12](#_Toc101131086)
-
-[*Figure 2. Correlation Heatmap of Attributes*	13](#_Toc101131087)
-
-[*Table 6. Highly Correlated Numerical Attributes*	14](#_Toc101131088)
-
-[**Exploratory Data Analytics**	14](#_Toc101131089)
-
-[*Figure 3. Shipping Mode Distribution of Sales*	15](#_Toc101131090)
-
-[*Figure 4. Late Delivery Risk of Goods by Shipping Mode*	16](#_Toc101131091)
-
-[*Figure 5. Profit per Month between 2015-2018*	16](#_Toc101131092)
-
-[*Figure 6. Sales vs Profit*	17](#_Toc101131093)
-
-[*Figure 7. Numerical Attributes Distribution*	17](#_Toc101131094)
-
-[**Experimental Design**	18](#_Toc101131095)
-
-[*Table 7. Target Attribute (Late_delivery_risk) Value Count*	18](#_Toc101131096)
-
-[**Machine Learning Validation Methods**	18](#_Toc101131097)
-
-[**Train test Split (Hold-out Validation)**	19](#_Toc101131098)
-
-[**Kfold**	19](#_Toc101131099)
-
-[**Stratified Kfold**	19](#_Toc101131100)
-
-[**Shuffle**	19](#_Toc101131101)
-
-[*Table 8. Classification Evaluation for Numerical Attributes (Late Delivery Prediction)*	19](#_Toc101131102)
-
-[*Figure 8. Linear Regression Model Predictions for Profit Estimation*	20](#_Toc101131103)
-
-[*Figure 9. Decision Tree Regressor Predictions for Profit Estimation*	20](#_Toc101131104)
-
-[*Table 9. Regression Evaluation for Numerical Attributes (Profit Prediction)*	21](#_Toc101131105)
-
-[**Encoding Categorical Attributes**	21](#_Toc101131106)
-
-[*Table 10. Unique Values of Categorical Attributes for Encoding Purposes*	21](#_Toc101131107)
-
-[**One Hot Encoding**	22](#_Toc101131108)
-
-[**Label Encoding**	22](#_Toc101131109)
-
-[*Table 11. Highly Correlated Encoded and Numerical Attributes*	22](#_Toc101131110)
-
-[*Table 12. Classification Evaluation for All Attributes (Late Delivery Prediction)*	23](#_Toc101131111)
-
-[*Table 13. Classification Report for the Best Model (Logistic Regression)*	23](#_Toc101131112)
-
-[*Figure 10. Confusion Matrix and ROC Curve for the Best Model (Logistic Regression)*	24](#_Toc101131113)
-
-[*Table 14. Regression Evaluation for All Attributes (Profit Prediction)*	24](#_Toc101131114)
-
-[**Conclusion**	25](#_Toc101131115)
-
-[References	26](#_Toc101131116)
-
-
-**
-
-
 **Improving Supply Chain Management by Machine Learning Applications:** 
 
 **DataCo Global Case Study**
@@ -280,7 +165,7 @@ I checked variance to see whether any attribute provides information or not at i
 
 Then I need to see the correlation between attributes to check whether different attributes give the same or similar information in the dataset.
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.007.png)
+![](https://github.com/ktlszn/dataco-supply_chain/blob/main/images/Correlation%20Heatmap.png)
 ### *Figure 2. Correlation Heatmap of Attributes*
 
 There are some highly correlated attributes in our dataset (Table 6.) and one of the highly correlated sets should be removed from the dataset. I limited my correlation coefficient limit for dropping attribute in 0.85 and up.
@@ -302,27 +187,31 @@ There are some highly correlated attributes in our dataset (Table 6.) and one of
 # **Exploratory Data Analytics**
 Standard class shipping is the highest share among all shipping modes (Figure 3.) as expected covering more than half of the shipping. It is followed by second class, first class and same day shipping respectively.
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.008.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/shipping%20mode%20(2).png" alt="drawing" height="500"/>
+
 ### *Figure 3. Shipping Mode Distribution of Sales*
 
 First class and same day shipping modes are offering more luxury delivery options. However, proportion of late delivery among those categories are higher than standard class delivery (Figure 4).  
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.009.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/late%20delivery%20risk%20-%20shipping%20mode.png" alt="drawing" height="450"/>
+
 ### *Figure 4. Late Delivery Risk of Goods by Shipping Mode*
 
 Monthly profit from the sales is relatively consistent through the years. However, the profit starts to drop at the end of 2017 (Figure 5.).
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.010.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/profit%20per%20month.png" alt="drawing" height="450"/>
+
 ### *Figure 5. Profit per Month between 2015-2018*
 
 Looking at profit data together with sales data (Figure 6.) clarifies the sudden drop in profits on the late 2017. Declining sales clearly affected the monthly profit amount.
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.011.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/sales%20vs%20profit.png" alt="drawing" height="450"/>
+
 ### *Figure 6. Sales vs Profit*
 
 Distribution of numerical attributes as also checked (Figure 7.) in case of any additional data cleaning might be required, and data with outliers are belong to profit of the orders.
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.012.png)
+![](https://github.com/ktlszn/dataco-supply_chain/blob/main/images/Numerical%20Attributes%20Distribution%20Boxplots.png)
 ### *Figure 7. Numerical Attributes Distribution*
 
 The profit estimation is one of our targets in this study. Therefore, we will not remove outliers from the dataset.
@@ -363,10 +252,12 @@ Out of the 4 machine learning models, Logistic Regression gave the best result a
 
 After predicting the late deliveries, I run the machine learning models for profit estimation.
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.013.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/Linear%20Regression%20Predictions.png" alt="drawing" height="350"/>
+
 ### *Figure 8. Linear Regression Model Predictions for Profit Estimation*
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.014.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/Decision%20Tree%20Regressor%20Predictions.png" alt="drawing" height="350"/>
+
 ### *Figure 9. Decision Tree Regressor Predictions for Profit Estimation*
 
 ### *Table 9. Regression Evaluation for Numerical Attributes (Profit Prediction)*
@@ -449,7 +340,8 @@ Precision shows how much of our positive guesses were actually positive (for the
 
 Precision and recall are 98.2% and %96.2 respectively for late delivery prediction (Table 13.). As our target variable is balanced, precision and recall for late delivery and on-time delivery are close to each other and the accuracy score of the model. 
 
-![](Aspose.Words.e518acd5-00e0-4638-97a5-d35bb87ecf61.015.png)
+<img src="https://github.com/ktlszn/dataco-supply_chain/blob/main/images/ROC_curve-confusion_matrix%20(4).png" alt="drawing" height="450"/>
+
 ### *Figure 10. Confusion Matrix and ROC Curve for the Best Model (Logistic Regression)*
 
 
